@@ -1,0 +1,312 @@
+
+$teal: #00ADE5;
+$navy: #243254;
+$green: #73B643;
+$lime: #A8C538;
+$red: #ED2024;
+$grey: #979B9F;
+$seafoam: #92D4D0;
+$sky: #96D9ED;
+$orange: #D96427;
+
+$link-color: $navy;
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.bg-container {
+	@include respond-to( 768px ) {
+		background: url(../img/bg-body.jpg) center center no-repeat;
+		background-size: cover;
+	}
+}
+
+
+
+.head {
+	background: url(../img/bg-header.jpg) center center no-repeat;
+	background-size: cover;
+	border-bottom: 20px solid $orange;
+
+	@include respond-to( 600px ) {
+		border-bottom: 35px solid $orange;
+	}
+}
+
+
+
+// wrap div
+.wrap {
+	max-width: 1220px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+// calculator container
+.calculator-container {
+	@include clearfix;
+	background: url(../img/tree.jpg) center center no-repeat;
+	background-size: cover;
+	padding-bottom: 40px;
+}
+
+
+
+// calculator styles
+.calculators {
+	.main {
+		@include respond-to( 1024px ) {
+			padding: 0 20px;
+			float: left;
+			width: 65%;
+		}
+
+		.calculator {
+			padding: 20px;
+			background: rgba( white, .7 );
+			color: black;
+
+			// &.navy { background-color: $navy; }
+			// &.teal { background-color: $teal; }
+			// &.seafoam { background-color: $seafoam; }
+			// &.lime { background-color: $lime; }
+
+			@include respond-to( 768px ) {
+				margin-top: 30px;
+				border-radius: 25px;
+				padding: 20px;
+
+				.third { 
+					width: 30%;
+
+					&.first {
+						width: 40%;
+
+						img {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+
+
+			@include respond-to( 768px ) {
+				&.credit, &.loan-auto, &.loan-personal {
+					position: relative;
+					padding: 20px;
+				}
+			}
+
+		
+			h3 {
+				text-align: center;
+				@include font-title;
+
+				@include respond-to( 768px ) {
+					padding-top: 30px;
+				}
+			}
+
+
+			.rate-display {
+				@include clearfix;
+				padding-bottom: 20px;
+				
+				.start {
+					display: block;
+					text-align: center;
+					font-size: 1.2em;
+					padding: 0 0 10px 0;
+				}
+
+				h2, .end {
+					float: left;
+					@include font-title;
+				}
+
+				h2 {
+					width: 60%;
+					font-size: 60px;
+					line-height: 1.2em;
+					padding: 0 10px 0 0;
+					text-align: right;
+
+					@include respond-to( 768px ) { width: 78%; }
+				}
+
+				.end {
+					width: 30%;
+					font-size: 17px;
+					line-height: 1.2em;
+
+					span {
+						font-size: 30px;
+					}
+
+					@include respond-to( 768px ) { width: 22%; }
+				}
+			}
+		}
+	}
+
+
+	.aside {
+		margin-top: 30px;
+		background: rgba( white, .7 );
+	
+		@include respond-to( 768px ) { 
+			border-radius: 25px;
+
+			&.third {
+				padding: 0 0 20px 0;
+			}
+		}
+
+		table {
+			width: 100%;
+
+			tr {
+				td {
+					vertical-align: middle;
+					padding: 10px 20px;
+					width: 45%;
+					font-size: 15px;
+					line-height: 17px;
+					color: black;
+					background: white;
+
+					// &.navy { background: $navy; }
+					// &.teal { background: $teal; }
+					// &.seafoam { background: $seafoam; }
+					// &.lime { background: $lime; }
+
+					&.label {
+						@include font-title;
+						font-size: 18px;
+						line-height: 1.2em;
+						width: 55%;
+					}
+
+					.result {
+						font-size: 1.6em;
+					}
+				}
+			}
+		}
+
+		.pad {
+			padding: 10px 0;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		h3 {
+			@include font-title;
+			text-align: center;
+		}
+
+		input[type=reset], .button {
+			padding: 10px;
+			font-size: 18px;
+			line-height: 18px;
+			border-radius: 10px;
+			background: $orange;
+			border: 0;
+			color: white;
+			text-align: center;
+
+			&.try-again {
+				margin: -60px 0 0 20px;
+			}
+		}
+
+		.apply {
+			display: block;
+			margin: 0 0 -40px auto;
+		}
+	}
+	
+}
+
+
+.more-info {
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	background: rgba( white, .7 );
+	color: black;
+
+	@include respond-to( 768px ) {
+		padding: 20px;
+		margin-top: 30px;
+		border-radius: 25px;
+	}
+
+	h3 {
+		@include font-title;
+		line-height: 1.3em;
+		padding: 7px 0;
+	}
+
+	p {
+		line-height: 1.3em;
+		padding: 7px 0;
+	}
+
+	a {
+		color: #231F20;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+
+
+td .result {
+	display: block;
+	line-height: 1.2em;
+}
+
+
+
+// footer styles
+.footer-bar {
+	@include font-title;
+	background: $orange;
+	color: white;
+	padding: 30px;
+	text-align: center;
+}
+
+
+
+footer.fineprint {
+	padding: 20px;
+	font-size: 90%;
+	color: #777;
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+
+
