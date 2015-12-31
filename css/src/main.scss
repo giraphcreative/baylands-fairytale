@@ -3,7 +3,7 @@ $teal: #00ADE5;
 $navy: #243254;
 $green: #73B643;
 $lime: #A8C538;
-$red: #ED2024;
+$red: #AF273F;
 $grey: #979B9F;
 $seafoam: #92D4D0;
 $sky: #96D9ED;
@@ -36,10 +36,10 @@ $link-color: $navy;
 .head {
 	background: url(../img/bg-header.jpg) center center no-repeat;
 	background-size: cover;
-	border-bottom: 20px solid $orange;
+	border-bottom: 20px solid $red;
 
 	@include respond-to( 600px ) {
-		border-bottom: 35px solid $orange;
+		border-bottom: 35px solid $red;
 	}
 }
 
@@ -58,7 +58,6 @@ $link-color: $navy;
 // calculator container
 .calculator-container {
 	@include clearfix;
-	background: url(../img/tree.jpg) center center no-repeat;
 	background-size: cover;
 	padding-bottom: 40px;
 }
@@ -225,7 +224,7 @@ $link-color: $navy;
 			font-size: 18px;
 			line-height: 18px;
 			border-radius: 10px;
-			background: $orange;
+			background: $red;
 			border: 0;
 			color: white;
 			text-align: center;
@@ -290,7 +289,7 @@ td .result {
 // footer styles
 .footer-bar {
 	@include font-title;
-	background: $orange;
+	background: $red;
 	color: white;
 	padding: 30px;
 	text-align: center;
