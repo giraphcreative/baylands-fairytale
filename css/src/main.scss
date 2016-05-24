@@ -1,9 +1,9 @@
 
-$teal: #00ADE5;
-$navy: #243254;
+$teal: #188180;
+$navy: #162443;
 $green: #73B643;
 $lime: #A8C538;
-$red: #AF273F;
+$red: #9E1E30;
 $grey: #979B9F;
 $seafoam: #92D4D0;
 $sky: #96D9ED;
@@ -25,21 +25,23 @@ $link-color: $navy;
 
 // background-container
 .bg-container {
-	@include respond-to( 768px ) {
-		background: url(../img/bg-body.jpg) center center no-repeat;
-		background-size: cover;
-	}
+	background: url(../img/bg-body.jpg) center center no-repeat;
+	background-size: cover;
 }
 
 
 
 .head {
-	background: url(../img/bg-header.jpg) center center no-repeat;
 	background-size: cover;
 	border-bottom: 20px solid $red;
+	text-align: center;
 
 	@include respond-to( 600px ) {
 		border-bottom: 35px solid $red;
+	}
+
+	img {
+		margin-bottom: -12px;
 	}
 }
 
@@ -88,12 +90,16 @@ $link-color: $navy;
 		.calculator {
 			padding: 20px;
 			background: rgba( white, .7 );
-			color: black;
+			color: white;
 
-			// &.navy { background-color: $navy; }
-			// &.teal { background-color: $teal; }
-			// &.seafoam { background-color: $seafoam; }
-			// &.lime { background-color: $lime; }
+			.third.first {
+				text-align: center;
+			}
+
+			&.navy { background-color: $navy; }
+			&.teal { background-color: $teal; }
+			&.red { background: $red; }
+			&.lime { background-color: $lime; }
 
 			@include respond-to( 768px ) {
 				margin-top: 30px;
@@ -199,10 +205,10 @@ $link-color: $navy;
 					color: black;
 					background: white;
 
-					// &.navy { background: $navy; }
-					// &.teal { background: $teal; }
-					// &.seafoam { background: $seafoam; }
-					// &.lime { background: $lime; }
+					&.navy { background: $navy; }
+					&.teal { background: $teal; }
+					&.red { background: $red; }
+					&.lime { background: $lime; }
 
 					&.label {
 						@include font-title;
@@ -230,25 +236,21 @@ $link-color: $navy;
 			@include font-title;
 			text-align: center;
 		}
+	
+		.buttons {
+			position: relative;
 
-		input[type=reset], .button {
-			padding: 10px;
-			font-size: 18px;
-			line-height: 18px;
-			border-radius: 10px;
-			background: $red;
-			border: 0;
-			color: white;
-			text-align: center;
-
-			&.try-again {
-				margin: -60px 0 0 20px;
+			.apply {
+				position: absolute;
+				top: 10%;
+				left: 14%;
 			}
-		}
 
-		.apply {
-			display: block;
-			margin: 0 0 -40px auto;
+			.try-again {
+				position: absolute;
+				bottom: 20%;
+				left: 14%;
+			}
 		}
 	}
 	
@@ -301,7 +303,7 @@ td .result {
 // footer styles
 .footer-bar {
 	@include font-title;
-	background: $red;
+	background: $navy;
 	color: white;
 	padding: 30px;
 	text-align: center;
