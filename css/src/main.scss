@@ -5,6 +5,9 @@ $green: #73B643;
 $lime: #A8C538;
 $red: #9E1E30;
 $grey: #979B9F;
+$grey-light: #939598;
+$grey-dark: #414042;
+$black: #231F20;
 $seafoam: #92D4D0;
 $sky: #96D9ED;
 $orange: #D96427;
@@ -23,26 +26,10 @@ $link-color: $navy;
 
 
 
-// background-container
-.bg-container {
-	background: url(../img/bg-body.jpg) center center no-repeat;
-	background-size: cover;
-}
-
-
-
 .head {
+	background: url(../img/bg-header.jpg) center center no-repeat;
 	background-size: cover;
-	border-bottom: 20px solid $red;
-	text-align: center;
-
-	@include respond-to( 600px ) {
-		border-bottom: 35px solid $red;
-	}
-
-	img {
-		margin-bottom: -12px;
-	}
+	padding: 80px 0 40px 10px;
 }
 
 
@@ -57,12 +44,37 @@ $link-color: $navy;
 
 
 
+h1.bar {
+	background: $red;
+	color: white;
+	font-size: 1.8em;
+	line-height: 1.4em;
+	font-weight: bold;
+	padding: 7px 10px;
+	text-align: center;
+	margin: 0;
+}
+
+
+
 // calculator container
 .calculator-container {
 	@include clearfix;
+	background: $red url(../img/bg-body.png) center center;
 	background-size: cover;
-	padding-bottom: 40px;
+	padding: 0 0 30px;
 }
+
+
+
+// background colors
+.bg-navy { background: $navy; }
+.bg-teal { background: $teal; }
+.bg-red { background: $red; }
+.bg-lime { background: $lime; }
+.bg-black { background: $black; }
+.bg-grey-light { background: $grey-light; }
+.bg-grey-dark { background: $grey-dark; }
 
 
 
@@ -89,17 +101,11 @@ $link-color: $navy;
 
 		.calculator {
 			padding: 20px;
-			background: rgba( white, .7 );
 			color: white;
 
 			.third.first {
 				text-align: center;
 			}
-
-			&.navy { background-color: $navy; }
-			&.teal { background-color: $teal; }
-			&.red { background: $red; }
-			&.lime { background-color: $lime; }
 
 			@include respond-to( 768px ) {
 				margin-top: 30px;
@@ -183,17 +189,16 @@ $link-color: $navy;
 	.aside {
 		margin-top: 30px;
 		background: rgba( white, .7 );
+		padding: 20px 0 0 0;
 	
 		@include respond-to( 768px ) { 
 			border-radius: 25px;
-
-			&.third {
-				padding: 0 0 20px 0;
-			}
+			border: 4px solid $black;
 		}
 
 		table {
 			width: 100%;
+			margin: 15px 0;
 
 			tr {
 				td {
@@ -203,12 +208,6 @@ $link-color: $navy;
 					font-size: 15px;
 					line-height: 17px;
 					color: white;
-					background: white;
-
-					&.navy { background: $navy; }
-					&.teal { background: $teal; }
-					&.red { background: $red; }
-					&.lime { background: $lime; }
 
 					&.label {
 						@include font-title;
@@ -237,20 +236,15 @@ $link-color: $navy;
 			text-align: center;
 		}
 	
-		.buttons {
+		.apply img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.try-again {
 			position: relative;
-
-			.apply {
-				position: absolute;
-				top: 10%;
-				left: 14%;
-			}
-
-			.try-again {
-				position: absolute;
-				bottom: 20%;
-				left: 14%;
-			}
+			top: -40px;
+			left: 25px;
 		}
 	}
 	
@@ -303,10 +297,18 @@ td .result {
 // footer styles
 .footer-bar {
 	@include font-title;
-	background: $navy;
+	background: $black;
 	color: white;
 	padding: 30px;
 	text-align: center;
+
+	.phone {
+		margin: 20px 0 0;
+
+		@include respond-to( 1024px ) {
+			margin: 30px 0 0;
+		}
+	}
 }
 
 
