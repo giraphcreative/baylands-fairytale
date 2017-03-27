@@ -10,125 +10,140 @@
 <body>
 <div class="bg-container">
 	
-	<div class="head">
-		<div class="wrap">
-			<img src="img/header.png">
-		</div>
-	</div>
+	<header>
+		<img src="img/header.png">
+	</header>
 	
-	<h1 class="bar">Tell us a little about your loans, and see how much you can save.</h1>
-	
-	<div class="calculator-container">
-		
-		<div class="calculators wrap">
+	<div class="calculator-container wrap">
 
-			<div class="two-third main">
-
-				<div class="loan-auto calculator bg-black">
-					<div class="third first">
-						<img src="img/rate-auto.png">
-					</div>
-					<div class="third">
-						<p><label for="amount">Amount</label><input type="text" placeholder="7,500" class="amount" /></p>
-						<p><label for="rate">Rate</label><input type="text" placeholder="8.99" class="rate percent" /></p>
-						<input type="hidden" class="rate_compare" value="1.49" />
-					</div>
-					<div class="third">
-						<p><label for="term">Term (months)</label>
-							<select class="term">
-								<option value="12m">12 mo.</option>
-								<option value="24m">24 mo.</option>
-								<option value="36m">36 mo.</option>
-								<option value="48m">48 mo.</option>
-								<option value="60m">60 mo.</option>
-								<option value="72m">72 mo.</option>
-								<option value="84m">84 mo.</option>
-							</select>
-						</p>
-					</div>
-					<div class="group"></div>
-				</div>
-
-				<div class="loan-personal calculator bg-grey-light">
-					<div class="third first">
-						<img src="img/rate-personal.png">
-					</div>
-					<div class="third">
-						<p><label for="amount">Amount</label><input type="text" placeholder="7,500" class="amount" /></p>
-						<p><label for="rate">Rate</label><input type="text" placeholder="10.5" class="rate percent" /></p>
-						<input type="hidden" class="rate_compare" value="7.50" />
-					</div>
-					<div class="third">
-						<p><label for="term">Term (months)</label>
-							<select class="term">
-								<option value="12m">12 mo.</option>
-								<option value="24m">24 mo.</option>
-								<option value="36m">36 mo.</option>
-								<option value="48m">48 mo.</option>
-								<option value="60m">60 mo.</option>
-							</select>
-						</p>
-					</div>
-					<div class="group"></div>
-				</div>
-
-				<div class="credit calculator bg-grey-dark">
-					<div class="third first">
-						<img src="img/rate-credit.png">
-					</div>
-					<div class="third">
-						<p><label for="amount">Amount</label><input type="text" placeholder="3,500" class="amount" /></p>
-						<p><label for="rate">Rate</label><input type="text" placeholder="14.5" class="rate percent" /></p>
-						<input type="hidden" class="term" value="12m" />
-						<input type="hidden" class="rate_compare" value="8.90" />
-					</div>
-					<div class="group"></div>
-				</div>
-
-				<div class="more-info">
-					<a href="mailto:mortgage@baylandsfcu.org"><img src="img/more-text.png"></a>
-				</div>
-
-			</div>
+		<div class="intro">
+			<h4>Fishing for a better payment? Don’t take the bank bait.</h4>
+			<p>Credit unions were formed to save members money on loans.</p>
 			
-			<div class="third aside">
-				<div class="text-center">
-					<img src="img/result-header.png">
-				</div>
-				<table cellpadding="10" cellspacing="0" border="0">
-					<tr>
-						<td class="bg-black label">Auto Loans</td>
-						<td class="bg-black">up to <span class="result loan-auto"></span> in savings</td>
-					</tr>
-					<tr>
-						<td class="bg-grey-light label">Personal Loans</td>
-						<td class="bg-grey-light">up to <span class="result loan-personal"></span> in savings</td>
-					</tr>
-					<tr>
-						<td class="bg-grey-dark label">Credit Cards</td>
-						<td class="bg-grey-dark">up to <span class="result credit"></span> in savings</td>
-					</tr>
-				</table>
-
-				<a href="https://www.baylandsfcu.org/forms/loan-application.aspx" class="apply"><img src="img/button-apply.png"></a>
-				<a href="/" class="try-again"><img src="img/button-try-again.png"></a>
+			<div class="fifty">
+				<p>See how you can put that principle to work for you!  Go on. Put us to the test.</p>
+				<p><a href="#calculator" class="btn">Calculate Savings &gt;</a></p>
 			</div>
-		
-		</div>
 
+			<div class="fifty">
+				<p>Already a member?  Share the savings with friends and family.</p>
+				<p><a href="#refer" class="btn">Refer a Friend &gt;</a></p>
+			</div>
+		</div>
+		
+		<div class="calculators" id="calculator">
+
+			<div class="loan-auto calculator bg-teal">
+				<div class="third first"> 
+					<img src="img/rate-auto.png">
+				</div>
+				<div class="third">
+					<p><label for="amount">Amount</label><input type="text" placeholder="7,500" class="amount" /></p>
+					<p><label for="rate">Rate</label><input type="text" placeholder="8.99" class="rate percent" /></p>
+					<input type="hidden" class="rate_compare" value="1.49" />
+				</div>
+				<div class="third">
+					<p><label for="term">Term (months)</label>
+						<select class="term">
+							<option value="12m">12 mo.</option>
+							<option value="24m">24 mo.</option>
+							<option value="36m">36 mo.</option>
+							<option value="48m">48 mo.</option>
+							<option value="60m">60 mo.</option>
+							<option value="72m">72 mo.</option>
+							<option value="84m">84 mo.</option>
+						</select>
+					</p>
+					<p class="result auto"></p>
+				</div>
+				<div class="group"></div>
+			</div>
+
+			<div class="loan-personal calculator bg-seafoam">
+				<div class="third first">
+					<img src="img/rate-personal.png">
+				</div>
+				<div class="third">
+					<p><label for="amount">Amount</label><input type="text" placeholder="7,500" class="amount" /></p>
+					<p><label for="rate">Rate</label><input type="text" placeholder="10.5" class="rate percent" /></p>
+					<input type="hidden" class="rate_compare" value="7.50" />
+				</div>
+				<div class="third">
+					<p><label for="term">Term (months)</label>
+						<select class="term">
+							<option value="12m">12 mo.</option>
+							<option value="24m">24 mo.</option>
+							<option value="36m">36 mo.</option>
+							<option value="48m">48 mo.</option>
+							<option value="60m">60 mo.</option>
+						</select>
+					</p>
+					<p class="result personal"></p>
+				</div>
+				<div class="group"></div>
+			</div>
+
+			<div class="credit calculator bg-blue starfish">
+				<div class="third first">
+					<img src="img/rate-credit.png">
+				</div>
+				<div class="third">
+					<p><label for="amount">Amount</label><input type="text" placeholder="3,500" class="amount" /></p>
+					<p><label for="rate">Rate</label><input type="text" placeholder="14.5" class="rate percent" /></p>
+					<input type="hidden" class="term" value="12m" />
+					<input type="hidden" class="rate_compare" value="8.90" />
+				</div>
+				<div class="third">
+					<p class="result auto"></p>
+				</div>
+				<div class="group"></div>
+			</div>
+
+			<div class="more-info">
+				<a href="mailto:mortgage@baylandsfcu.org">
+					<h3>Interested in saving more on your mortgage too?</h3>
+					<p>We can help! Give our friendly mortgage team a call at 804-843-2520.</p>
+				</a>
+			</div>
+
+
+			<div class="refer" id="refer">
+				<h3>Do you love the credit union? Share it with your friends and family. We love helping them save more!</h3>
+
+				<div class="box bg-teal">
+					<form id="contact" name="contact">
+					<div class="fifty">
+						<p>your name
+							<input type="text" name="name" placeholder="Jane Smith" /></p>
+						<p>your email
+							<input type="text" name="email" placeholder="jane@smith.com" /></p>
+						<p>your phone
+							<input type="text" name="phone" placeholder="123-456-7890" /></p>
+					</div>
+					<div class="fifty">
+						<p>your friend's name
+							<input type="text" name="friend-name" placeholder="Jane Smith" /></p>
+						<p>your friend's email
+							<input type="text" name="friend-email" placeholder="jane@smith.com" /></p>
+						<p>your friend's phone
+							<input type="text" name="friend-phone" placeholder="123-456-7890" /></p>
+					</div>
+					<p class="text-center"><input type="submit" name="submit" value="Share The Savings &gt;" class="btn" /></p>
+					</form>
+					<div class="group"></div>
+				</div>
+			</div>
+
+		</div>
+			
 	</div>
 
 </div>
 		
 <div class="footer-bar">
 
-	<div class="wrap">		
-		<div class="two-third">
-			<img src="img/footer-phone.png" class="phone">
-		</div>
-		<div class="third">
-			<img src="img/logo-baylands.png">
-		</div>
+	<div class="wrap">
+		<img src="img/logo-baylands.png">
 	</div>
 	
 </div>

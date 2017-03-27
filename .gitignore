@@ -1,4 +1,5 @@
 _site/
+send.php
 .DS_Store
 node_modules
 .sass-cache

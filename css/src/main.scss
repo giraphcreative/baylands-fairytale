@@ -1,15 +1,17 @@
 
-$teal: #188180;
-$navy: #162443;
+$teal: #418DB6;
+$navy: #153962;
+$blue: #016EA6;
+$seafoam: #2BBFCC;
+$sky: #96D9ED;
 $green: #73B643;
 $lime: #A8C538;
-$red: #9E1E30;
+$red: #D42027;
+$gold: #D8BC48;
 $grey: #979B9F;
 $grey-light: #939598;
 $grey-dark: #414042;
 $black: #231F20;
-$seafoam: #92D4D0;
-$sky: #96D9ED;
 $orange: #D96427;
 
 $link-color: $navy;
@@ -26,17 +28,27 @@ $link-color: $navy;
 
 
 
-.head {
-	background: url(../img/bg-header.jpg) center center no-repeat;
-	background-size: cover;
-	padding: 80px 0 40px 10px;
+.bg-container {
+	background: $navy;
+}
+
+
+
+header {
+	background: url(../img/bg-header.png) bottom center repeat-x;
+	text-align: center;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 
 
 // wrap div
 .wrap {
-	max-width: 1220px;
+	max-width: 1100px;
 	margin: 0 auto;
 	position: relative;
 	@include clearfix;
@@ -44,24 +56,9 @@ $link-color: $navy;
 
 
 
-h1.bar {
-	background: $red;
-	color: white;
-	font-size: 1.8em;
-	line-height: 1.4em;
-	font-weight: bold;
-	padding: 7px 10px;
-	text-align: center;
-	margin: 0;
-}
-
-
-
 // calculator container
 .calculator-container {
 	@include clearfix;
-	background: $red url(../img/bg-body.png) center center;
-	background-size: cover;
 	padding: 0 0 30px;
 }
 
@@ -73,181 +70,126 @@ h1.bar {
 .bg-red { background: $red; }
 .bg-lime { background: $lime; }
 .bg-black { background: $black; }
+.bg-seafoam { background: $seafoam; }
+.bg-blue { background: $blue; }
+.bg-black { background: $black; }
 .bg-grey-light { background: $grey-light; }
 .bg-grey-dark { background: $grey-dark; }
 
 
 
-// calculator styles
-.calculators {
-	
-	.intro {
-		padding: 30px 20px;
-		font-size: 27px;
-		line-height: 32px;
-		text-align: center;
+.intro {
+	@include clearfix;
+	padding: 20px;
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.3em;
+
+	h4 {
+		padding-bottom: 0;
+	}
+
+	.fifty {
+		color: $teal;
 
 		@include respond-to( 768px ) {
-			color: white;
+			padding: 10px 50px;
 		}
-	}
 
-	.main {
 		@include respond-to( 1024px ) {
-			padding: 0 20px;
-			float: left;
-			width: 65%;
-		}
-
-		.calculator {
-			padding: 20px;
-			color: white;
-
-			.third.first {
-				text-align: center;
-			}
-
-			@include respond-to( 768px ) {
-				margin-top: 30px;
-				border-radius: 25px;
-				padding: 20px;
-
-				.third { 
-					width: 30%;
-
-					&.first {
-						width: 40%;
-
-						img {
-							margin-top: 20px;
-						}
-					}
-				}
-			}
-
-
-			@include respond-to( 768px ) {
-				&.credit, &.loan-auto, &.loan-personal {
-					position: relative;
-					padding: 20px;
-				}
-			}
-
-		
-			h3 {
-				text-align: center;
-				@include font-title;
-
-				@include respond-to( 768px ) {
-					padding-top: 30px;
-				}
-			}
-
-
-			.rate-display {
-				@include clearfix;
-				padding-bottom: 20px;
-				
-				.start {
-					display: block;
-					text-align: center;
-					font-size: 1.2em;
-					padding: 0 0 10px 0;
-				}
-
-				h2, .end {
-					float: left;
-					@include font-title;
-				}
-
-				h2 {
-					width: 60%;
-					font-size: 60px;
-					line-height: 1.2em;
-					padding: 0 10px 0 0;
-					text-align: right;
-
-					@include respond-to( 768px ) { width: 78%; }
-				}
-
-				.end {
-					width: 30%;
-					font-size: 17px;
-					line-height: 1.2em;
-
-					span {
-						font-size: 30px;
-					}
-
-					@include respond-to( 768px ) { width: 22%; }
-				}
-			}
+			padding: 10px 70px;
 		}
 	}
 
+	@include respond-to( 768px ) {
+		padding: 30px 20px 0;
+	}
+}
 
-	.aside {
-		margin-top: 30px;
-		background: rgba( white, .7 );
-		padding: 20px 0 0 0;
-	
-		@include respond-to( 768px ) { 
+
+
+// calculator styles
+.calculators {
+
+	.calculator {
+		padding: 20px;
+		color: white;
+
+		.third.first {
+			text-align: center;
+		}
+
+		@include respond-to( 768px ) {
+			margin: 20px;
 			border-radius: 25px;
-			border: 4px solid $black;
-		}
+			padding: 20px;
 
-		table {
-			width: 100%;
-			margin: 15px 0;
+			.third { 
+				width: 30%;
 
-			tr {
-				td {
-					vertical-align: middle;
-					padding: 10px 20px;
-					width: 45%;
-					font-size: 15px;
-					line-height: 17px;
-					color: white;
+				&.first {
+					width: 40%;
 
-					&.label {
-						@include font-title;
-						font-size: 18px;
-						line-height: 1.2em;
-						width: 55%;
-					}
-
-					.result {
-						font-size: 1.6em;
+					img {
+						margin-top: 20px;
 					}
 				}
 			}
 		}
 
-		.pad {
-			padding: 10px 0;
+		@include respond-to( 1024px ) {
+			margin: 30px;
 		}
 
-		.center {
-			text-align: center;
+
+		@include respond-to( 768px ) {
+			&.credit, &.loan-auto, &.loan-personal {
+				position: relative;
+				padding: 20px;
+			}
 		}
 
-		h3 {
-			@include font-title;
-			text-align: center;
-		}
-	
-		.apply img {
-			display: block;
-			margin: 0 auto;
-		}
 
-		.try-again {
-			position: relative;
-			top: -40px;
-			left: 25px;
+		.rate-display {
+			@include clearfix;
+			padding-bottom: 20px;
+			
+			.start {
+				display: block;
+				text-align: center;
+				font-size: 1.2em;
+				padding: 0 0 10px 0;
+			}
+
+			h2, .end {
+				float: left;
+				@include font-title;
+			}
+
+			h2 {
+				width: 60%;
+				font-size: 60px;
+				line-height: 1.2em;
+				padding: 0 10px 0 0;
+				text-align: right;
+
+				@include respond-to( 768px ) { width: 78%; }
+			}
+
+			.end {
+				width: 30%;
+				font-size: 17px;
+				line-height: 1.2em;
+
+				span {
+					font-size: 30px;
+				}
+
+				@include respond-to( 768px ) { width: 22%; }
+			}
 		}
-	}
-	
+	}	
 }
 
 
@@ -255,13 +197,17 @@ h1.bar {
 	padding: 20px;
 	text-align: center;
 	position: relative;
-	background: rgba( white, .7 );
+	background: $red;
 	color: black;
 
 	@include respond-to( 768px ) {
 		padding: 20px;
-		margin-top: 30px;
+		margin: 20px;
 		border-radius: 25px;
+	}
+
+	@include respond-to( 1024px ) {
+		margin: 30px;
 	}
 
 	h3 {
@@ -276,11 +222,7 @@ h1.bar {
 	}
 
 	a {
-		color: #231F20;
-
-		&:hover {
-			text-decoration: underline;
-		}
+		color: white;
 	}
 
 }
@@ -293,21 +235,118 @@ td .result {
 }
 
 
+.refer {
+	color: white;
+	margin-bottom: 80px;
+	position: relative;
+
+	&:after {
+		content: ' ';
+		position: absolute;
+		bottom: -120px;
+		right: 0;
+		left: 0;
+		height: 120px;
+		background: url(../img/underwater.png) bottom center no-repeat;
+		background-size: contain;
+		pointer-events: none;
+	}
+
+	@include respond-to( 600px ) {
+		margin-bottom: 120px;
+		&:after { height: 370px; bottom: -160px; }
+	}
+
+	@include respond-to( 900px ) {
+		margin-bottom: 220px;
+		&:after { bottom: -260px; }
+	}
+
+	h3 {
+		padding: 10px 20px;
+		text-align: center;
+
+		@include respond-to( 768px ) {
+			padding: 20px 30px;
+		}
+	}
+
+	.box {
+		padding: 20px;
+
+		@include respond-to( 768px ) {
+			margin: 20px;
+			border-radius: 25px;
+		}
+
+		@include respond-to( 1024px ) {
+			margin: 30px;
+		}
+	}
+
+	.btn {
+		margin-top: 20px;
+		font-size: 1.6em;
+	}
+}
+
 
 // footer styles
 .footer-bar {
 	@include font-title;
-	background: $black;
+	background: $teal;
 	color: white;
-	padding: 30px;
-	text-align: center;
+	padding: 10px;
 
-	.phone {
-		margin: 20px 0 0;
+	.wrap {
+		padding: 30px 0;
+		position: relative;
+		text-align: center;
 
-		@include respond-to( 1024px ) {
-			margin: 30px 0 0;
+		@include respond-to( 600px ) {	
+			text-align: right;
+
+			img {
+				width: 30%;
+			}
+
+			&:after {
+				content: ' ';
+				position: absolute;
+				right: 360px;
+				left: 0;
+				bottom: -15px;
+				height: 300px;
+				width: 70%;
+				background: url(../img/car.png) left bottom no-repeat;
+				background-size: contain;
+				pointer-events: none;
+			}
 		}
+	}
+}
+
+
+
+.btn {
+	@include font;
+	display: inline-block;
+	padding: 10px 15px;
+	background: $gold;
+	color: $navy;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	transition: 400ms opacity ease-in-out;
+	opacity: .8;
+	border: 0;
+	cursor: pointer;
+		
+	@include respond-to( 768px ) {
+		padding: 20px 40px;
+	}
+
+	&:hover {
+		opacity: 1;
 	}
 }
 
