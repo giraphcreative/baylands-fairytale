@@ -237,6 +237,17 @@ header {
 
 
 
+.error {
+	@include font-bold;
+	padding: 10px 15px;
+	background: $red;
+	color: white;
+	border-radius: 8px;
+	display: none;
+}
+
+
+
 .refer {
 	color: white;
 	margin-bottom: 80px;
