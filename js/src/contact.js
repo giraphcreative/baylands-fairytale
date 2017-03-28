@@ -31,9 +31,18 @@ var contact_submit = function( form ) {
 		errors.push( "Please provide a name." );
 	}
 
+	if ( field.friend_name.length < 2 ) {
+		errors.push( "Please provide a friend's name." );
+	}
+
 	// check cu_name
 	if ( !valid_email( field.email ) ) {
 		errors.push( "Please provide a valid email address." );	
+	}
+
+	// check cu_name
+	if ( !valid_email( field.friend_email ) ) {
+		errors.push( "Please provide a valid friend's email address." );	
 	}
 
 	// if no errors

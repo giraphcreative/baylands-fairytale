@@ -105,6 +105,21 @@ header {
 	@include respond-to( 768px ) {
 		padding: 30px 20px 0;
 	}
+
+	.btn {
+		width: 100%;
+		white-space: nowrap;
+		text-align: center;
+		padding: 10px 0;
+
+		@include respond-to( 1024px ) {
+			width: 300px;
+		}
+
+		@include respond-to( 768px ) {
+			padding: 20px 0;
+		}
+	}
 }
 
 
