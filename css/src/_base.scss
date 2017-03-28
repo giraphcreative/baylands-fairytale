@@ -26,10 +26,6 @@ a {
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 10px 0;
-
-	span {
-		color: #999;
-	}
 }
 
 h1 {
@@ -56,6 +52,9 @@ h4 {
 	line-height: 1.3em;
 }
 
+strong {
+	@include font-bold;
+}
 
 input[type=text], select {
 	display: block;

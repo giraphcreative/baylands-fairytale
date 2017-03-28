@@ -269,14 +269,14 @@
             // the real difference in interest.
             var output_content = options.response_compare
                 .replace( "%savings%", callback_data.savings.toFixed(2) )
-                .replace( "%a_payment_amount%", loan_2_info.payment_amount_formatted )
-                .replace( "%a_num_payments%", loan_2_info.num_payments )
-                .replace( "%a_total_payments%", loan_2_info.total_payments_formatted )
-                .replace( "%a_total_interest%", loan_2_info.total_interest_formatted )
-                .replace( "%b_payment_amount%", loan_1_info.payment_amount_formatted )
-                .replace( "%b_num_payments%", loan_1_info.num_payments )
-                .replace( "%b_total_payments%", loan_1_info.total_payments_formatted )
-                .replace( "%b_total_interest%", loan_1_info.total_interest_formatted );
+                .replace( "%loan_2_payment_amount%", loan_2_info.payment_amount_formatted )
+                .replace( "%loan_2_num_payments%", loan_2_info.num_payments )
+                .replace( "%loan_2_total_payments%", loan_2_info.total_payments_formatted )
+                .replace( "%loan_2_total_interest%", loan_2_info.total_interest_formatted )
+                .replace( "%loan_1_payment_amount%", loan_1_info.payment_amount_formatted )
+                .replace( "%loan_1_num_payments%", loan_1_info.num_payments )
+                .replace( "%loan_1_total_payments%", loan_1_info.total_payments_formatted )
+                .replace( "%loan_1_total_interest%", loan_1_info.total_interest_formatted );
             output_elem.html( output_content );
         
         } else {
