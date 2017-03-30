@@ -409,6 +409,8 @@
         if ( amount*rate*term>0 ) {
             // Fill in the output fields, rounding to 2 decimal places
             return {
+                original_rate: rate,
+                original_term: term,
                 original_amount: amount,
                 payment_amount: monthly,
                 payment_amount_formatted: monthly.toFixed(2),
