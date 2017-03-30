@@ -78,6 +78,20 @@ header {
 
 
 
+// text colors
+.text-navy { color: $navy; }
+.text-teal { color: $teal; }
+.text-red { color: $red; }
+.text-lime { color: $lime; }
+.text-black { color: $black; }
+.text-seafoam { color: $seafoam; }
+.text-blue { color: $blue; }
+.text-black { color: $black; }
+.text-grey-light { color: $grey-light; }
+.text-grey-dark { color: $grey-dark; }
+
+
+
 .intro {
 	@include clearfix;
 	padding: 20px;
@@ -88,18 +102,6 @@ header {
 
 	h4 {
 		padding-bottom: 0;
-	}
-
-	.fifty {
-		color: $teal;
-
-		@include respond-to( 768px ) {
-			padding: 10px 50px;
-		}
-
-		@include respond-to( 1024px ) {
-			padding: 10px 70px;
-		}
 	}
 
 	@include respond-to( 768px ) {
