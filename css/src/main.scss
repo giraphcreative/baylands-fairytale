@@ -179,7 +179,7 @@ header {
 		}
 
 		@include respond-to( 1024px ) {
-			margin: 30px;
+			margin: 30px 30px 30px 0;
 		}
 
 
@@ -330,7 +330,7 @@ header {
 	}
 
 	@include respond-to( 1024px ) {
-		margin: 30px;
+		margin: 30px 30px 30px 0;
 	}
 
 	h3 {
