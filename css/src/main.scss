@@ -126,11 +126,12 @@ header {
 
 .calculator-container {
 	position: relative;
+	margin-bottom: 60px;
 
 	&:after {
 		content: ' ';
 		position: absolute;
-		bottom: -120px;
+		bottom: -65px;
 		right: 0;
 		left: 0;
 		height: 120px;
@@ -139,14 +140,9 @@ header {
 		pointer-events: none;
 	}
 
-	@include respond-to( 600px ) {
-		margin-bottom: 120px;
-		&:after { height: 370px; bottom: -160px; }
-	}
-
-	@include respond-to( 900px ) {
-		margin-bottom: 230px;
-		&:after { bottom: -270px; }
+	@include respond-to( 768px ) {
+		margin-bottom: 100px;
+		&:after { height: 370px; bottom: -110px; }
 	}
 
 }
@@ -274,12 +270,20 @@ header {
 	position: relative;
 	padding: 20px 0;
 	background: $seafoam;
+	
+	h3 {
+		text-transform: uppercase;
+	}
 
-	td {
-		padding: 10px;
+	table {
+		width: 100%;
 
-		&.label {
-			@include font-bold;
+		td {
+			padding: 10px;
+
+			&.label {
+				@include font-bold;
+			}
 		}
 	}
 
@@ -358,7 +362,7 @@ header {
 }
 
 
-
+/*
 .refer {
 	color: white;
 	margin-bottom: 80px;
@@ -376,14 +380,9 @@ header {
 		pointer-events: none;
 	}
 
-	@include respond-to( 600px ) {
-		margin-bottom: 120px;
+	@include respond-to( 768px ) {
+		margin-bottom: 160px;
 		&:after { height: 370px; bottom: -160px; }
-	}
-
-	@include respond-to( 900px ) {
-		margin-bottom: 220px;
-		&:after { bottom: -260px; }
 	}
 
 	h3 {
@@ -413,6 +412,7 @@ header {
 		font-size: 1.6em;
 	}
 }
+*/
 
 
 // footer styles

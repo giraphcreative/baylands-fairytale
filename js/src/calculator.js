@@ -5,8 +5,8 @@ $(function(){
 	$(".calculator.credit").accrue({
 		mode: "compare",
 		response_output_div: ".result.credit",
-		response_compare:"<strong>Savings: $%savings%</strong>",
-		error_text:"<span>Enter balance and rate to calculate savings.</span>",
+		response_compare:"up to <strong>$%savings%</strong> in savings",
+		error_text:"up to <strong>$0</strong> in savings",
 		callback: function( elem, data ) {
 			console.log( data );
 			if ( data.loan_1 != 0 ) {
@@ -34,8 +34,8 @@ $(function(){
 	$(".calculator.loan-auto").accrue({
 		mode: "compare",
 		response_output_div: ".result.auto",
-		response_compare:"up to <strong>$%savings%</strong> in savings!",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
+		response_compare:"up to <strong>$%savings%</strong> in savings",
+		error_text:"up to <strong>$0</strong> in savings",
 		callback: function( elem, data ) {
 			if ( data.loan_1 != 0 ) {
 				$(".result.auto").addClass('calculated');
@@ -48,8 +48,8 @@ $(function(){
 	$(".calculator.loan-personal").accrue({
 		mode: "compare",
 		response_output_div: ".result.personal",
-		response_compare:"<strong>Payments as low as: $%loan_2_payment_amount%/mo<br>Savings: $%savings%</strong>",
-		error_text:"<span>Enter loan info to see payment and savings.</span>",
+		response_compare:"up to <strong>$%savings%</strong> in savings",
+		error_text:"up to <strong>$0</strong> in savings",
 		callback: function( elem, data ) {
 			if ( data.loan_1 != 0 ) {
 				$(".result.personal").addClass('calculated');
