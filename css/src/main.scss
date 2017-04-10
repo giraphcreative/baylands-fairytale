@@ -312,6 +312,12 @@ header {
 		}
 	}
 
+
+	@include respond-to( 1024px ) {
+		margin-top: 30px;
+	}
+
+
 }
 
 
