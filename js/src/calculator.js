@@ -2,7 +2,6 @@
 
 $(function(){
 
-	/*
 	$(".calculator.credit").accrue({
 		mode: "compare",
 		response_output_div: ".result.credit",
@@ -17,7 +16,8 @@ $(function(){
 			}
 		}
 	});
-	*/
+
+	/*
 	$(".calculator.credit input[type=text]").on('keyup',function(){
 		var interest_old = parseFloat( $('.calculator.credit .amount').val().replace(/[^0-9.]/g,"") ) * parseFloat( $('.calculator.credit .rate').val().replace(/[^0-9.]/g,"") / 100 );
 		var interest_new = parseFloat( $('.calculator.credit .amount').val().replace(/[^0-9.]/g,"") ) * .089;
@@ -29,12 +29,12 @@ $(function(){
 			$(".result.credit").html( "<span>Enter balance and rate to calculate savings.</span>" );
 		}
 	});
-
+	*/
 
 	$(".calculator.loan-auto").accrue({
 		mode: "compare",
 		response_output_div: ".result.auto",
-		response_compare:"<strong>Payments as low as: $%loan_2_payment_amount%/mo<br>Savings: $%savings%</strong>",
+		response_compare:"up to <strong>$%savings%</strong> in savings!",
 		error_text:"<span>Enter loan info to see payment and savings.</span>",
 		callback: function( elem, data ) {
 			if ( data.loan_1 != 0 ) {

@@ -58,7 +58,6 @@ header {
 
 // calculator container
 .calculator-container {
-	@include clearfix;
 	padding: 0 0 30px;
 }
 
@@ -124,6 +123,33 @@ header {
 	}
 }
 
+
+.calculator-container {
+	position: relative;
+
+	&:after {
+		content: ' ';
+		position: absolute;
+		bottom: -120px;
+		right: 0;
+		left: 0;
+		height: 120px;
+		background: url(../img/underwater.png) bottom center no-repeat;
+		background-size: contain;
+		pointer-events: none;
+	}
+
+	@include respond-to( 600px ) {
+		margin-bottom: 120px;
+		&:after { height: 370px; bottom: -160px; }
+	}
+
+	@include respond-to( 900px ) {
+		margin-bottom: 230px;
+		&:after { bottom: -270px; }
+	}
+
+}
 
 
 // calculator styles
@@ -208,21 +234,6 @@ header {
 			}
 		}
 
-		.result {
-			color: white;
-			font-size: 1.2em;
-			text-align: center;
-			line-height: 1.4em;
-			padding: 20px;
-			border-radius: 10px;
-			background-color: transparent;
-			transition: 1s background-color ease-in-out;
-
-			&.calculated {
-				background-color: $green;
-			}
-		}
-
 		@include respond-to( 768px ) {
 			&.credit:after {
 				content: ' ';
@@ -244,26 +255,6 @@ header {
 				bottom: -20px;
 			}
 
-			&.loan-auto:after {
-				content: ' ';
-				background: url(../img/fish2.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				right: -140px;
-				top: 20px;
-			}
-
-			&.loan-personal:before {
-				content: ' ';
-				background: url(../img/bubbles2.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				right: -120px;
-				top: -20px;
-			}
-
 			&.loan-auto:before {
 				content: ' ';
 				background: url(../img/bubbles1.png) center center no-repeat;
@@ -276,6 +267,49 @@ header {
 		}
 	}	
 }
+
+
+
+.aside {
+	position: relative;
+	padding: 20px 0;
+	background: $seafoam;
+
+	td {
+		padding: 10px;
+
+		&.label {
+			@include font-bold;
+		}
+	}
+
+	@include respond-to( 768px ) {
+		margin-top: 20px;
+		border-radius: 25px;
+
+		&:after {
+			content: ' ';
+			background: url(../img/fish2.png) center center no-repeat;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			right: -140px;
+			bottom: 20px;
+		}
+
+		&:before {
+			content: ' ';
+			background: url(../img/bubbles2.png) center center no-repeat;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			right: -120px;
+			top: -20px;
+		}
+	}
+
+}
+
 
 
 .more-info {
@@ -308,28 +342,6 @@ header {
 
 	a {
 		color: white;
-	}
-
-	&:after {
-		content: ' ';
-		position: absolute;
-		bottom: -120px;
-		right: 0;
-		left: 0;
-		height: 120px;
-		background: url(../img/underwater.png) bottom center no-repeat;
-		background-size: contain;
-		pointer-events: none;
-	}
-
-	@include respond-to( 600px ) {
-		margin-bottom: 120px;
-		&:after { height: 370px; bottom: -160px; }
-	}
-
-	@include respond-to( 900px ) {
-		margin-bottom: 230px;
-		&:after { bottom: -270px; }
 	}
 
 }
