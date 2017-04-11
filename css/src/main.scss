@@ -290,21 +290,33 @@ header {
 	position: relative;
 	padding: 20px 0;
 	background: $seafoam;
+	color: white;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	transition: 500ms height ease-in-out;
 	
 	h3 {
 		text-transform: uppercase;
+		font-size: 1.5em;
 	}
 
-	table {
-		width: 100%;
+	.result {
+		padding: 12px 14px;
+		text-align: center;
+		display: none;
 
-		td {
-			padding: 10px;
-
-			&.label {
-				@include font-bold;
-			}
+		&.calculated {
+			display: block;
 		}
+	}
+
+	.instructions {
+		padding: 12px 22px;
+		text-align: center;
+	}
+
+	a.btn {
+		margin: 10px auto;
 	}
 
 	@include respond-to( 768px ) {
@@ -336,7 +348,6 @@ header {
 	@include respond-to( 1024px ) {
 		margin-top: 30px;
 	}
-
 
 }
 

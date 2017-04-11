@@ -2,18 +2,29 @@
 
 $(function(){
 
+	var check_all_results = function(){
+		if ($('.result.credit').is(':hidden') && 
+			$('.result.personal').is(':hidden') && 
+			$('.result.auto').is(':hidden') ) {
+			$('.aside .instructions').slideDown();
+		} else {
+			$('.aside .instructions').slideUp();
+		}
+	}
+
 	$(".calculator.credit").accrue({
 		mode: "compare",
 		response_output_div: ".result.credit",
-		response_compare:"up to <strong>$%savings%</strong> in savings",
-		error_text:"up to <strong>$0</strong> in savings",
+		response_compare:"Save up to <strong>$%savings%</strong> on<br> <strong>Credit Cards</strong>.",
+		error_text:"$0",
 		callback: function( elem, data ) {
-			console.log( data );
+			var el = $(".result.credit");
 			if ( data.loan_1 != 0 ) {
-				$(".result.credit").addClass('calculated');
+				if ( el.is(':hidden') ) el.slideDown();
 			} else {
-				$(".result.credit").removeClass('calculated');
+				if ( el.is(':visible') ) el.slideUp();
 			}
+			check_all_results();
 		}
 	});
 
@@ -34,28 +45,32 @@ $(function(){
 	$(".calculator.loan-auto").accrue({
 		mode: "compare",
 		response_output_div: ".result.auto",
-		response_compare:"up to <strong>$%savings%</strong> in savings",
-		error_text:"up to <strong>$0</strong> in savings",
+		response_compare:"Save up to <strong>$%savings%</strong> on<br><strong>Auto Loans</strong>.",
+		error_text:"$0",
 		callback: function( elem, data ) {
+			var el = $(".result.auto");
 			if ( data.loan_1 != 0 ) {
-				$(".result.auto").addClass('calculated');
+				if ( el.is(':hidden') ) el.slideDown();
 			} else {
-				$(".result.auto").removeClass('calculated');
+				if ( el.is(':visible') ) el.slideUp();
 			}
+			check_all_results();
 		}
 	});
 
 	$(".calculator.loan-personal").accrue({
 		mode: "compare",
 		response_output_div: ".result.personal",
-		response_compare:"up to <strong>$%savings%</strong> in savings",
-		error_text:"up to <strong>$0</strong> in savings",
+		response_compare:"Save up to <strong>$%savings%</strong> on<br><strong>Personal Loans</strong>",
+		error_text:"$0",
 		callback: function( elem, data ) {
+			var el = $(".result.personal");
 			if ( data.loan_1 != 0 ) {
-				$(".result.personal").addClass('calculated');
+				if ( el.is(':hidden') ) el.slideDown();
 			} else {
-				$(".result.personal").removeClass('calculated');
+				if ( el.is(':visible') ) el.slideUp();
 			}
+			check_all_results();
 		}
 	});
 
