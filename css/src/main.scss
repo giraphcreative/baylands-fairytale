@@ -358,7 +358,7 @@ header {
 	text-align: center;
 	position: relative;
 	background: $red;
-	color: black;
+	color: white;
 
 	@include respond-to( 768px ) {
 		padding: 20px;
