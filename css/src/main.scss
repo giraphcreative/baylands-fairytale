@@ -1,9 +1,10 @@
 
 $teal: #418DB6;
-$navy: #153962;
+$navy: #1B2F5B;
 $blue: #016EA6;
 $seafoam: #2BBFCC;
 $sky: #96D9ED;
+$purple: #4162AC;
 $green: #73B643;
 $lime: #A8C538;
 $red: #D42027;
@@ -27,9 +28,13 @@ $link-color: $navy;
 @import "grid";
 
 
+body {
+	background: lighten( $grey, 20% );
+}
+
 
 .bg-container {
-	background: $navy;
+	background: white;
 }
 
 
@@ -48,7 +53,7 @@ header {
 
 // wrap div
 .wrap {
-	max-width: 1100px;
+	max-width: 1150px;
 	margin: 0 auto;
 	position: relative;
 	@include clearfix;
@@ -65,6 +70,7 @@ header {
 
 // background colors
 .bg-navy { background: $navy; }
+.bg-purple { background: $purple; }
 .bg-teal { background: $teal; }
 .bg-red { background: $red; }
 .bg-lime { background: $lime; }
@@ -79,6 +85,7 @@ header {
 
 // text colors
 .text-navy { color: $navy; }
+.text-purple { color: $purple; }
 .text-teal { color: $teal; }
 .text-red { color: $red; }
 .text-lime { color: $lime; }
@@ -94,7 +101,7 @@ header {
 .intro {
 	@include clearfix;
 	padding: 20px;
-	color: white;
+	color: navy;
 	text-align: center;
 	font-size: 1.2em;
 	line-height: 1.3em;
@@ -104,7 +111,7 @@ header {
 	}
 
 	@include respond-to( 768px ) {
-		padding: 30px 20px 0;
+		padding: 0 20px;
 	}
 
 	.btn {
@@ -126,25 +133,15 @@ header {
 
 .calculator-container {
 	position: relative;
-	margin-bottom: 60px;
+}
 
-	&:after {
-		content: ' ';
-		position: absolute;
-		bottom: -65px;
-		right: 0;
-		left: 0;
-		height: 120px;
-		background: url(../img/underwater.png) bottom center no-repeat;
-		background-size: contain;
-		pointer-events: none;
-	}
+
+.columns {
+	padding: 0;
 
 	@include respond-to( 768px ) {
-		margin-bottom: 100px;
-		&:after { height: 370px; bottom: -110px; }
+		padding: 10px 20px;
 	}
-
 }
 
 
@@ -230,57 +227,6 @@ header {
 			}
 		}
 
-		@include respond-to( 768px ) {
-			&.credit:after {
-				content: ' ';
-				background: url(../img/starfish.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				right: 30px;
-				bottom: -20px;
-			}
-
-			&.loan-personal:after {
-				content: ' ';
-				background: url(../img/fish1.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				left: -120px;
-				bottom: -20px;
-			}
-
-			&.loan-auto:before {
-				content: ' ';
-				background: url(../img/bubbles1.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				left: -100px;
-				bottom: 20px;
-			}
-
-			&.credit:before {
-				content: ' ';
-				background: url(../img/fish2.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				right: -240px;
-				bottom: 100px;
-			}
-
-			&.loan-personal:before {
-				content: ' ';
-				background: url(../img/bubbles2.png) center center no-repeat;
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				right: -320px;
-				top: 80px;
-			}
-		}
 	}	
 }
 
@@ -288,16 +234,15 @@ header {
 
 .aside {
 	position: relative;
-	padding: 20px 0;
-	background: $seafoam;
+	padding: 20px;
+	background: $navy;
 	color: white;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	line-height: 1.5em;
 	transition: 500ms height ease-in-out;
 	
 	h3 {
-		text-transform: uppercase;
-		font-size: 1.4em;
+		font-size: 1.5em;
 	}
 
 	.result {
@@ -317,31 +262,12 @@ header {
 
 	a.btn {
 		margin: 10px auto;
+		background: $green;
 	}
 
 	@include respond-to( 768px ) {
 		margin-top: 20px;
 		border-radius: 25px;
-
-		&:after {
-			content: ' ';
-			background: url(../img/fish2.png) center center no-repeat;
-			width: 100px;
-			height: 100px;
-			position: absolute;
-			right: -140px;
-			bottom: 20px;
-		}
-
-		&:before {
-			content: ' ';
-			background: url(../img/bubbles2.png) center center no-repeat;
-			width: 100px;
-			height: 100px;
-			position: absolute;
-			right: -120px;
-			top: -20px;
-		}
 	}
 
 
@@ -357,7 +283,6 @@ header {
 	padding: 20px;
 	text-align: center;
 	position: relative;
-	background: $red;
 	color: white;
 
 	@include respond-to( 768px ) {
@@ -401,92 +326,33 @@ header {
 }
 
 
-/*
-.refer {
-	color: white;
-	margin-bottom: 80px;
-	position: relative;
-
-	&:after {
-		content: ' ';
-		position: absolute;
-		bottom: -120px;
-		right: 0;
-		left: 0;
-		height: 120px;
-		background: url(../img/underwater.png?v=1) bottom center no-repeat;
-		background-size: contain;
-		pointer-events: none;
-	}
-
-	@include respond-to( 768px ) {
-		margin-bottom: 160px;
-		&:after { height: 370px; bottom: -160px; }
-	}
-
-	h3 {
-		padding: 10px 20px;
-		text-align: center;
-
-		@include respond-to( 768px ) {
-			padding: 20px 30px;
-		}
-	}
-
-	.box {
-		padding: 20px;
-
-		@include respond-to( 768px ) {
-			margin: 20px;
-			border-radius: 25px;
-		}
-
-		@include respond-to( 1024px ) {
-			margin: 30px;
-		}
-	}
-
-	.btn {
-		margin-top: 20px;
-		font-size: 1.6em;
-	}
-}
-*/
-
 
 // footer styles
 .footer-bar {
-	@include font-title;
-	background: $teal;
+	background: $navy;
 	color: white;
-	padding: 10px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	font-weight: 300;
+	
+	strong {
+		font-size: 2.2em;
+	}
 
-	.wrap {
-		padding: 30px 0;
-		position: relative;
-		text-align: center;
+	@include respond-to( 768px ) {
+		@include respond-to( 768px ) {
 
-		@include respond-to( 600px ) {	
-			text-align: right;
-
-			img {
-				width: 30%;
-			}
-
-			&:after {
-				content: ' ';
-				position: absolute;
-				right: 360px;
-				left: 0;
-				bottom: -15px;
-				height: 300px;
-				width: 70%;
-				background: url(../img/car.png) left bottom no-repeat;
-				background-size: contain;
-				pointer-events: none;
-			}
 		}
 	}
+}
+
+
+.footer-logo {
+	text-align: center;
+	padding: 40px 20px 20px;
 }
 
 
@@ -495,8 +361,8 @@ header {
 	@include font;
 	display: inline-block;
 	padding: 10px 15px;
-	background: $gold;
-	color: $navy;
+	background: $green;
+	color: white;
 	text-transform: uppercase;
 	font-size: 1.2em;
 	transition: 400ms opacity ease-in-out;
@@ -510,6 +376,7 @@ header {
 
 	&:hover {
 		opacity: 1;
+		color: white;
 	}
 }
 
