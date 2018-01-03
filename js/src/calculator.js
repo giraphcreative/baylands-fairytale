@@ -15,7 +15,7 @@ $(function(){
 	$(".calculator.credit").accrue({
 		mode: "compare",
 		response_output_div: ".result.credit",
-		response_compare:"Save up to <strong>$%savings%</strong> on<br> <strong>Credit Cards</strong>.",
+		response_compare:"Save up to <strong>$%savings%</strong> on <strong>Credit Cards</strong>.",
 		error_text:"$0",
 		callback: function( elem, data ) {
 			var el = $(".result.credit");
@@ -45,7 +45,7 @@ $(function(){
 	$(".calculator.loan-auto").accrue({
 		mode: "compare",
 		response_output_div: ".result.auto",
-		response_compare:"Save up to <strong>$%savings%</strong> on<br><strong>Auto Loans</strong>.",
+		response_compare:"Save up to <strong>$%savings%</strong> on <strong>Auto Loans</strong>.",
 		error_text:"$0",
 		callback: function( elem, data ) {
 			var el = $(".result.auto");
@@ -61,7 +61,7 @@ $(function(){
 	$(".calculator.loan-personal").accrue({
 		mode: "compare",
 		response_output_div: ".result.personal",
-		response_compare:"Save up to <strong>$%savings%</strong> on<br><strong>Personal Loans</strong>",
+		response_compare:"Save up to <strong>$%savings%</strong> on <strong>Personal Loans</strong>",
 		error_text:"$0",
 		callback: function( elem, data ) {
 			var el = $(".result.personal");

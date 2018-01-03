@@ -102,7 +102,7 @@ header {
 	padding: 20px;
 	color: navy;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	line-height: 1.3em;
 
 	h1 {
@@ -250,6 +250,10 @@ header {
 		padding: 12px 14px;
 		text-align: center;
 		display: none;
+		background-color: rgba( white, .7 );
+		color: $navy;
+		border-radius: 10px;
+		font-size: 1.2em;
 
 		&.calculated {
 			display: block;
@@ -264,6 +268,8 @@ header {
 	a.btn {
 		margin: 10px auto;
 		background: $green;
+		opacity: 1;
+		border-radius: 10px;
 	}
 
 	@include respond-to( 768px ) {
@@ -285,6 +291,7 @@ header {
 	text-align: center;
 	position: relative;
 	color: white;
+	font-size: 1.2em;
 
 	@include respond-to( 768px ) {
 		padding: 20px;
@@ -304,9 +311,10 @@ header {
 	}
 
 	h4 {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		line-height: 1.4em;
 		padding: 7px 0;
+		font-weight: normal;
 	}
 
 	a {
