@@ -177,7 +177,7 @@ header {
 		}
 
 		@include respond-to( 1024px ) {
-			margin: 30px 30px 30px 0;
+			margin: 30px 40px;
 		}
 
 
@@ -187,7 +187,6 @@ header {
 				padding: 20px;
 			}
 		}
-
 
 		.rate-display {
 			@include clearfix;
@@ -227,61 +226,17 @@ header {
 				@include respond-to( 768px ) { width: 22%; }
 			}
 		}
+		
+		.result {
+			font-size: 1.6em;
+			line-height: 1.3em;
+			text-align: center;
 
-	}	
-}
-
-
-
-.aside {
-	position: relative;
-	padding: 20px;
-	background: $navy;
-	color: white;
-	font-size: 1.1em;
-	line-height: 1.5em;
-	transition: 500ms height ease-in-out;
-	
-	h3 {
-		font-size: 1.5em;
-	}
-
-	.result {
-		padding: 12px 14px;
-		text-align: center;
-		display: none;
-		background-color: rgba( white, .7 );
-		color: $navy;
-		border-radius: 10px;
-		font-size: 1.2em;
-
-		&.calculated {
-			display: block;
+			strong {
+				display: block;
+			}
 		}
-	}
-
-	.instructions {
-		padding: 12px 22px;
-		text-align: center;
-	}
-
-	a.btn {
-		margin: 10px auto;
-		background: $green;
-		opacity: 1;
-		border-radius: 10px;
-	}
-
-	@include respond-to( 768px ) {
-		margin-top: 20px;
-		border-radius: 25px;
-	}
-
-
-	@include respond-to( 1024px ) {
-		margin-top: 30px;
-	}
-
+	}	
 }
 
 
@@ -300,7 +255,7 @@ header {
 	}
 
 	@include respond-to( 1024px ) {
-		margin: 30px 30px 30px 0;
+		margin: 30px 40px;
 	}
 
 	h3 {
