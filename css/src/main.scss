@@ -132,6 +132,24 @@ header {
 }
 
 
+hr {
+	height: 0px;
+	border: none;
+	border-top: 1px solid lighten( $grey, 30% );
+	margin: 20px 0;
+
+	@include respond-to( 768px ) {
+		margin: 30px 0;
+	}
+}
+
+
+.quiet {
+	color: $grey-dark;
+	font-size: .85em;
+}
+
+
 .calculator-container {
 	position: relative;
 }
@@ -158,6 +176,10 @@ header {
 			text-align: center;
 		}
 
+		h3 {
+			font-size: 2em;
+		}
+
 		@include respond-to( 768px ) {
 			margin: 20px;
 			border-radius: 25px;
@@ -169,7 +191,7 @@ header {
 				&.first {
 					width: 40%;
 
-					img {
+					h3 {
 						margin-top: 20px;
 					}
 				}

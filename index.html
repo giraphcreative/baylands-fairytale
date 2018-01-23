@@ -25,6 +25,8 @@
 				<p class="text-center pad">
 					<a href="https://www.baylandsfcu.org/forms/loan-application.aspx" class="apply btn">Apply Now!</a>
 				</p>
+				<hr>
+				<p class="quiet">Typing in the form fields below will automatically update the results.</p>
 			</div>
 				
 			<div class="main group columns">
@@ -32,75 +34,84 @@
 				<div class="calculators" id="calculator">
 
 					<div class="loan-auto calculator bg-navy">
-						<div class="third first"> 
-							<img src="img/rate-auto.png" alt="Auto loan rate as low as 1.49% APR">
-						</div>
-						<div class="third">
-							<p><label for="amount1">Amount</label><input type="text" id="amount1" placeholder="7,500" class="amount" /></p>
-							<p><label for="rate1">Rate</label><input type="text" id="rate1" placeholder="8.99" class="rate percent" /></p>
-							<input type="hidden" class="rate_compare" value="1.49" />
-						</div>
-						<div class="third">
-							<p><label for="term1">Term (months)</label>
-								<select id="term1" class="term">
-									<option value="12m">12 mo.</option>
-									<option value="24m">24 mo.</option>
-									<option value="36m">36 mo.</option>
-									<option value="48m">48 mo.</option>
-									<option value="60m">60 mo.</option>
-									<option value="72m">72 mo.</option>
-									<option value="84m">84 mo.</option>
-								</select>
-							</p>
-							<p class="result auto"></p>
-						</div>
+						<fieldset>
+							<div class="third first">
+								<legend><h3>Auto Loans</h3></legend>
+								<img src="img/rate-auto.png" alt="Auto loan rate as low as 1.49% APR">
+							</div>
+							<div class="third">
+								<p><label for="amount1">Amount</label><input type="text" id="amount1" placeholder="7,500" class="amount" /></p>
+								<p><label for="rate1">Rate</label><input type="text" id="rate1" placeholder="8.99" class="rate percent" /></p>
+								<input type="hidden" class="rate_compare" value="1.49" />
+							</div>
+							<div class="third">
+								<p><label for="term1">Term (months)</label>
+									<select id="term1" class="term">
+										<option value="12m">12 mo.</option>
+										<option value="24m">24 mo.</option>
+										<option value="36m">36 mo.</option>
+										<option value="48m">48 mo.</option>
+										<option value="60m">60 mo.</option>
+										<option value="72m">72 mo.</option>
+										<option value="84m">84 mo.</option>
+									</select>
+								</p>
+								<p class="result auto"></p>
+							</div>
+						</fieldset>
 						<div class="group"></div>
 					</div>
 
 					<div class="loan-personal calculator bg-navy">
-						<div class="third first">
-							<img src="img/rate-personal.png" alt="Personal loan rate as low as 7.5% APR">
-						</div>
-						<div class="third">
-							<p><label for="amount2">Amount</label><input type="text" id="amount2" placeholder="7,500" class="amount" /></p>
-							<p><label for="rate2">Rate</label><input type="text" id="rate2" placeholder="10.5" class="rate percent" /></p>
-							<input type="hidden" class="rate_compare" value="7.50" />
-						</div>
-						<div class="third">
-							<p><label for="term2">Term (months)</label>
-								<select id="term2" class="term">
-									<option value="12m">12 mo.</option>
-									<option value="24m">24 mo.</option>
-									<option value="36m">36 mo.</option>
-									<option value="48m">48 mo.</option>
-									<option value="60m">60 mo.</option>
-								</select>
-							</p>
-							<p class="result personal"></p>
-						</div>
+						<fieldset>
+							<div class="third first">
+								<legemd><h3>Personal Loans</h3></legemd>
+								<img src="img/rate-personal.png" alt="Personal loan rate as low as 7.5% APR">
+							</div>
+							<div class="third">
+								<p><label for="amount2">Amount</label><input type="text" id="amount2" placeholder="7,500" class="amount" /></p>
+								<p><label for="rate2">Rate</label><input type="text" id="rate2" placeholder="10.5" class="rate percent" /></p>
+								<input type="hidden" class="rate_compare" value="7.50" />
+							</div>
+							<div class="third">
+								<p><label for="term2">Term (months)</label>
+									<select id="term2" class="term">
+										<option value="12m">12 mo.</option>
+										<option value="24m">24 mo.</option>
+										<option value="36m">36 mo.</option>
+										<option value="48m">48 mo.</option>
+										<option value="60m">60 mo.</option>
+									</select>
+								</p>
+								<p class="result personal"></p>
+							</div>
+						</fieldset>
 						<div class="group"></div>
 					</div>
 
 					<div class="credit calculator bg-navy starfish">
-						<div class="third first">
-							<img src="img/rate-credit.png" alt="Credit card rate as low as 8.9% APR">
-						</div>
-						<div class="third">
-							<p><label for="amount3">Amount</label><input type="text" id="amount3" placeholder="3,500" class="amount" /></p>
-							<p><label for="rate3">Rate</label><input type="text" id="rate3" placeholder="14.5" class="rate percent" /></p>
-							<input type="hidden" class="term" value="12m" />
-							<input type="hidden" class="rate_compare" value="8.90" />
-						</div>
-						<div class="third">
-							<p class="result credit"></p>
-						</div>
+						<fieldset>
+							<div class="third first">
+								<legend><h3>Credit Cards</h3></legend>
+								<img src="img/rate-credit.png" alt="Credit card rate as low as 8.9% APR">
+							</div>
+							<div class="third">
+								<p><label for="amount3">Amount</label><input type="text" id="amount3" placeholder="3,500" class="amount" /></p>
+								<p><label for="rate3">Rate</label><input type="text" id="rate3" placeholder="14.5" class="rate percent" /></p>
+								<input type="hidden" class="term" value="12m" />
+								<input type="hidden" class="rate_compare" value="8.90" />
+							</div>
+							<div class="third">
+								<p class="result credit"></p>
+							</div>
+						</fieldset>
 						<div class="group"></div>
 					</div>
 
 					<div class="more-info bg-purple">
 						
 						<h3>Interested in saving more on your mortgage too?</h3>
-						<h4>We can help! Give our friendly mortgage team a call at 804-843-2520 or email us at <a href="mailto:mortgage@baylandsfcu.org">mortgage@baylandsfcu.org</a> to arrange an appointment.</h4>
+						<p>We can help! Give our friendly mortgage team a call at 804-843-2520 or email us at <a href="mailto:mortgage@baylandsfcu.org">mortgage@baylandsfcu.org</a> to arrange an appointment.</p>
 						
 					</div>
 
