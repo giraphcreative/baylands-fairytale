@@ -180,6 +180,10 @@ hr {
 			text-align: center;
 		}
 
+		legend {
+			text-align: center;
+		}
+
 		h2 {
 			font-size: 2em;
 		}
@@ -191,14 +195,19 @@ hr {
 
 			.third { 
 				width: 30%;
+				margin-top: -80px;
 
 				&.first {
 					width: 40%;
-
-					h2 {
-						margin-top: 20px;
-					}
+					clear: left;
+					margin-top: 0;
 				}
+			}
+
+			legend {
+				width: 40%;
+				float: left;
+				padding-top: 20px;
 			}
 		}
 
