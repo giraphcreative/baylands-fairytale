@@ -180,7 +180,7 @@ hr {
 			text-align: center;
 		}
 
-		h3 {
+		h2 {
 			font-size: 2em;
 		}
 
@@ -195,17 +195,12 @@ hr {
 				&.first {
 					width: 40%;
 
-					h3 {
+					h2 {
 						margin-top: 20px;
 					}
 				}
 			}
 		}
-
-		@include respond-to( 1024px ) {
-			margin: 30px 40px;
-		}
-
 
 		@include respond-to( 768px ) {
 			&.credit, &.loan-auto, &.loan-personal {
@@ -223,21 +218,6 @@ hr {
 				text-align: center;
 				font-size: 1.2em;
 				padding: 0 0 10px 0;
-			}
-
-			h2, .end {
-				float: left;
-				@include font-title;
-			}
-
-			h2 {
-				width: 60%;
-				font-size: 60px;
-				line-height: 1.2em;
-				padding: 0 10px 0 0;
-				text-align: right;
-
-				@include respond-to( 768px ) { width: 78%; }
 			}
 
 			.end {
